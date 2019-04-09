@@ -1,0 +1,25 @@
+
+TEXT = '{"<"NUMBER">"?}{":"?} {$time=DATETIME?} {"Message forwarded from"?} {event_src.ip=IPV4|event_src.ip=IPV6|event_src.hostname=HOSTNAME|} {":"?} sshd[{$tmp_proc_id=NUMBER}]: Accepted {"password"|"publickey"|"keyboard-interactive/pam"} for {subject.name=WORDDASH} from {src.ip=IPV4|src.ip=IPV6|src.hostname=HOSTNAME} port {src.port=NUMBER} {protocol=WORDDASH}{REST}'
+
+if ($time == null) then
+    time = recv_time else
+    time = $time
+endif
+
+subject = "account"
+object = "system"
+action = "login"
+status = "success"
+
+datafield1 = $tmp_proc_id 
+
+event_src.title = "unix_like"
+
+event_src.category = "Operating system"
+
+id = "PT_UNIX_like_syslog_ssh_login"
+importance = "info"
+
+category.generic = "Access"
+category.high = "Authentication"
+category.low = "Remote"

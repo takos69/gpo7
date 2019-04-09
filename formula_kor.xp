@@ -1,0 +1,32 @@
+event PT_UNIX_like_syslog_ssh_login:
+	key:
+		src.ip, protocol
+		filter {
+			correlation_name == null and
+			action == "login" and
+			status == "success" and
+			protocol == "ssh2"
+		}
+rule Login_linux_ssh: PT_UNIX_like_syslog_ssh_login
+		on PT_UNIX_like_syslog_ssh_login{
+			$src.ip = src.ip
+			$protocol = protocol
+			}
+emit{
+	$correlation_name = "Login_linux_ssh"
+	$correlation_type = "event"
+	
+	$category.generic = "Login"
+	$category.high = "User connect ssh"
+	$category.low = "AAA"
+	
+	$action = "login"
+	$status = "success"
+	#$src.ip = src.ip
+	#$protocol = protocol
+	$protocol = "ssh2"
+	
+	$id = "login_linux_ssh"
+	$importance = "medium"
+	
+	}

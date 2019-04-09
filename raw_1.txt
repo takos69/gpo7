@@ -1,0 +1,11 @@
+Jun 16 11:05:57 bsd92 sshd[1264]: Accepted keyboard-interactive/pam for ek from 10.0.72.98 port 52813 ssh2
+Jun 16 11:04:11 bsd84 sshd[877]: Accepted publickey for root from 10.0.72.98 port 52763 ssh2
+Oct 21 03:54:03 fe80::a00:27ff:fe97:c366 sshd[15533]: Accepted password for root from 31.44.93.25 port 22464 ssh2
+Aug 17 13:14:44 sohpi16 sshd[10367]: Accepted password for eli from fe80::a00:27ff:fe4c:7b59 port 51237 ssh2
+Aug 17 13:14:18 sohpi16 sshd[10348]: Accepted publickey for root from 31.44.93.25 port 33864 ssh2
+Apr 14 11:45:22 bsd11 sshd[800]: Accepted publickey for root from 10.0.72.98 port 59932 ssh2: RSA b4:14:0d:a0:85:72:d9:61:f0:cb:ac:a1:c2:e5:22:e9
+Apr 14 11:46:58 bsd11 sshd[880]: Accepted keyboard-interactive/pam for ek from 10.0.72.98 port 60173 ssh2
+<38>Apr 14 11:46:58 testpc sshd[32185]: Accepted password for cli from 10.0.72.61 port 56570 ssh2
+<38>Oct 20 06:33:17 127.0.0.1 sshd[1783]: Accepted keyboard-interactive/pam for vagrant from 192.168.56.1 port 50473 ssh2
+Dec 14 00:40:11 Message forwarded from pad: sshd[5767448]: Accepted password for root from 172.17.7.49 port 39442 ssh2
+Dec 14 00:40:11 sshd[5767448]: Accepted password for root from 172.17.7.49 port 39442 ssh2
